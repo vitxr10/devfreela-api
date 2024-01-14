@@ -35,7 +35,7 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put (int id, [FromBody] Project project)
+        public IActionResult Put(int id, [FromBody] Project project)
         {
             //return BadRequest();
             return NoContent();
