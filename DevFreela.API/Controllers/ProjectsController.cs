@@ -1,4 +1,5 @@
 ﻿using DevFreela.API.Models;
+using DevFreela.Application.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,10 +8,17 @@ namespace DevFreela.API.Controllers
     [Route("api/projects")]
     public class ProjectsController : ControllerBase
     {
+        private readonly IProjectService _projectService;
+        public ProjectsController(IProjectService projectService) 
+        {
+            _projectService = projectService;
+        }
+
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok();
+            var projects = _projectService.GetAll();
+            return Ok(projects);
         }
 
         [HttpGet("{id}")]

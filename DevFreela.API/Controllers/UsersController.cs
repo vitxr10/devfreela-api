@@ -27,8 +27,8 @@ namespace DevFreela.API.Controllers
             return CreatedAtAction(nameof(GetById), new {id = project.Id}, project);
         }
 
-        [HttpPost("login")]
-        public IActionResult Login([FromBody] Project project)
+        [HttpPut("{id}/login")]
+        public IActionResult Login(int id)
         {
             //return BadRequest();
             // return NotFound();

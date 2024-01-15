@@ -22,7 +22,7 @@ namespace DevFreela.Application.Services.Implementations
 
         public List<ProjectViewModel> GetAll()
         {
-            var projects = _dbContext.Projects.Select(p => new ProjectViewModel(p.Title, p.IdClient, p.IdFreelancer, p.TotalCost))
+            var projects = _dbContext.Projects.Select(p => new ProjectViewModel(p.Id, p.Title, p.IdClient, p.IdFreelancer, p.TotalCost))
                 .ToList();
 
             return projects;
