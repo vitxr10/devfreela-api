@@ -13,7 +13,7 @@ namespace DevFreela.Application.Services.Interfaces
         List<ProjectViewModel> GetAll();
         ProjectDetailsViewModel GetById(int id);
         int Create(CreateProjectInputModel inputModel);
-        void CreateComment(CreateCommentInputModel inputModel);
+        void CreateComment(int id, CreateCommentInputModel inputModel);
         void Update(int id, UpdateProjectInputModel inputModel);
         void Start(int id);
         void Finish(int id);
