@@ -1,4 +1,4 @@
-﻿using DevFreela.API.Models;
+﻿using DevFreela.Application.InputModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,10 +21,11 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Project project)
+        public IActionResult Post([FromBody] CreateUserInputModel inputModel)
         {
             //return BadRequest();
-            return CreatedAtAction(nameof(GetById), new {id = project.Id}, project);
+            //return CreatedAtAction(nameof(GetById), new {id = inputModel.Id}, inputModel);
+            return Ok();
         }
 
         [HttpPut("{id}/login")]
@@ -36,7 +37,7 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Project project)
+        public IActionResult Put(int id, [FromBody] UpdateUserInputModel inputModel)
         {
             ////return BadRequest();
             return NoContent();
