@@ -3,6 +3,7 @@ using DevFreela.Application.Services.Interfaces;
 using DevFreela.Application.ViewModels;
 using DevFreela.Core.Entities;
 using DevFreela.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,8 +31,15 @@ namespace DevFreela.Application.Services.Implementations
 
         public ProjectDetailsViewModel GetById(int id)
         {
-            var project = _dbContext.Projects.FirstOrDefault(p => p.Id == id);
-            var projectDetailsViewModel = new ProjectDetailsViewModel(project.Title);
+            var project = _dbContext.Projects
+                .Include(p => p.Client)
+                .Include(p => p.Freelancer)
+                .FirstOrDefault(p => p.Id == id);
+
+            var projectDetailsViewModel = new ProjectDetailsViewModel(
+                project.Title,
+                project.Client.FullName,
+                project.Freelancer.FullName);
 
             return projectDetailsViewModel;
         }
@@ -39,7 +47,9 @@ namespace DevFreela.Application.Services.Implementations
         public int Create(CreateProjectInputModel inputModel)
         {
             var project = new Project(inputModel.Title, inputModel.Description, inputModel.IdClient, inputModel.IdFreelancer, inputModel.TotalCost);
+
             _dbContext.Projects.Add(project);
+            _dbContext.SaveChanges();
 
             return project.Id;
         }
@@ -47,31 +57,41 @@ namespace DevFreela.Application.Services.Implementations
         public void CreateComment(int id, CreateCommentInputModel inputModel)
         {
             var comment = new ProjectComment(inputModel.Content, inputModel.IdProject, inputModel.IdUser);
+
             _dbContext.Comments.Add(comment);
+            _dbContext.SaveChanges();
         }
 
         public void Update(int id, UpdateProjectInputModel inputModel)
         {
             var project = _dbContext.Projects.FirstOrDefault(p => p.Id == id);
+
             project.Update(inputModel.Title, inputModel.Description, inputModel.TotalCost);
+            _dbContext.SaveChanges();
         }
 
         public void Start(int id)
         {
             var project = _dbContext.Projects.FirstOrDefault(p => p.Id == id);
+
             project.Start();
+            _dbContext.SaveChanges();
         }
 
         public void Finish(int id)
         {
             var project = _dbContext.Projects.FirstOrDefault(p => p.Id == id);
+
             project.Finish();
+            _dbContext.SaveChanges();
         }
 
         public void Delete(int id)
         {
             var project = _dbContext.Projects.FirstOrDefault(p => p.Id == id);
+
             project.Delete();
+            _dbContext.SaveChanges();
         }
     }
 }
