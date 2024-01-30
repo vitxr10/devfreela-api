@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.API\\DevFreela.API.csproj": {}
+    "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.API\\DevFreela.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.API\\DevFreela.API.csproj": {
+    "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.API\\DevFreela.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
+        "projectUniqueName": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
         "projectName": "DevFreela.API",
-        "projectPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
+        "projectPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
         "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.API\\obj\\",
+        "outputPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,14 +28,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
-                "projectPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj"
+              "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
+                "projectPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj"
               },
-              "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
-                "projectPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+              "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+                "projectPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
               },
-              "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
+              "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
               }
             }
           }
@@ -53,6 +53,10 @@
             "Atlassian.SDK": {
               "target": "Package",
               "version": "[13.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -88,14 +92,14 @@
         }
       }
     },
-    "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
+    "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
+        "projectUniqueName": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
         "projectName": "DevFreela.Application",
-        "projectPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
+        "projectPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
         "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Application\\obj\\",
+        "outputPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -112,11 +116,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
-                "projectPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+              "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+                "projectPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
               },
-              "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
+              "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
               }
             }
           }
@@ -130,6 +134,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -150,14 +160,14 @@
         }
       }
     },
-    "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+    "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
+        "projectUniqueName": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
         "projectName": "DevFreela.Core",
-        "projectPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
+        "projectPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
         "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Core\\obj\\",
+        "outputPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -205,14 +215,14 @@
         }
       }
     },
-    "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+    "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
         "projectName": "DevFreela.Infrastructure",
-        "projectPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -229,8 +239,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
-                "projectPath": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+              "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+                "projectPath": "C:\\Users\\vitor\\OneDrive\\Documentos\\Projetos Mentoria .NET\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
               }
             }
           }
