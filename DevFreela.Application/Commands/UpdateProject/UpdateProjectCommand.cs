@@ -5,23 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevFreela.Application.Commands.CreateProject
+namespace DevFreela.Application.Commands.UpdateProject
 {
-    public class CreateProjectCommand : IRequest<int>
+    public class UpdateProjectCommand : IRequest<Unit>
     {
-        public CreateProjectCommand(string title, string description, int idClient, int idFreelancer, decimal totalCost)
+        public UpdateProjectCommand(int id, string title, string description, decimal totalCost)
         {
+            Id = id;
             Title = title;
             Description = description;
-            IdClient = idClient;
-            IdFreelancer = idFreelancer;
             TotalCost = totalCost;
         }
 
+        public int Id { get; set; }
         public string Title { get; private set; }
         public string Description { get; private set; }
-        public int IdClient { get; private set; }
-        public int IdFreelancer { get; private set; }
         public decimal TotalCost { get; private set; }
     }
 }
