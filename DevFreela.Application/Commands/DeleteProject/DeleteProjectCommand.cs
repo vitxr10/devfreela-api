@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevFreela.Application.Commands.StartProject
+namespace DevFreela.Application.Commands.DeleteProject
 {
-    public class StartProjectCommand : IRequest
+    public class DeleteProjectCommand : IRequest
     {
-        public StartProjectCommand(int id)
+        public DeleteProjectCommand(int id)
         {
             Id = id;
         }

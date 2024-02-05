@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevFreela.Application.Commands.StartProject
+namespace DevFreela.Application.Commands.FinishProject
 {
-    public class StartProjectCommand : IRequest
+    public class FinishProjectCommand : IRequest
     {
-        public StartProjectCommand(int id)
+        public FinishProjectCommand(int id)
         {
             Id = id;
         }

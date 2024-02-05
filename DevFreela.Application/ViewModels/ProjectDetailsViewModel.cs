@@ -11,11 +11,16 @@ namespace DevFreela.Application.ViewModels
 {
     public class ProjectDetailsViewModel
     {
-        public ProjectDetailsViewModel(string title, string clientFullName, string freelancerFullName)
+        public ProjectDetailsViewModel(string title, string description, int idClient, int idFreelancer, decimal totalCost, DateTime? startedAt, DateTime? finishedAt, ProjectStatusEnum status)
         {
             Title = title;
-            ClientFullName = clientFullName;
-            FreelancerFullName = freelancerFullName;
+            Description = description;
+            IdClient = idClient;
+            IdFreelancer = idFreelancer;
+            TotalCost = totalCost;
+            StartedAt = startedAt;
+            FinishedAt = finishedAt;
+            Status = status;
         }
 
         public string Title { get; private set; }

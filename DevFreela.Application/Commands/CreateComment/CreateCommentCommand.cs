@@ -17,7 +17,7 @@ namespace DevFreela.Application.Commands.CreateComment
         }
 
         public string Content { get; private set; }
-        public int IdProject { get; private set; }
+        public int IdProject { get; set; }
         public int IdUser { get; private set; }
     }
 }
