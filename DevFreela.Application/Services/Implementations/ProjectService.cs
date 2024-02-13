@@ -38,8 +38,13 @@ namespace DevFreela.Application.Services.Implementations
 
             var projectDetailsViewModel = new ProjectDetailsViewModel(
                 project.Title,
-                project.Client.FullName,
-                project.Freelancer.FullName);
+                project.Description,
+                project.IdClient,
+                project.IdFreelancer,
+                project.TotalCost,
+                project.StartedAt,
+                project.FinishedAt,
+                project.Status);
 
             return projectDetailsViewModel;
         }
