@@ -1,6 +1,9 @@
-﻿using DevFreela.Application.InputModels;
+﻿using DevFreela.Application.Commands.CreateUser;
+using DevFreela.Application.InputModels;
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interfaces;
+using DevFreela.Core.Entities;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,9 +12,11 @@ namespace DevFreela.API.Controllers
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
+        private readonly IMediator _mediator;
         private readonly IUserService _userService;
-        public UsersController(IUserService userService) 
+        public UsersController(IMediator mediator, IUserService userService) 
         {
+            _mediator = mediator;
             _userService = userService;
         }
 
@@ -32,11 +37,21 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] CreateUserInputModel inputModel)
+        public async Task<IActionResult> Post([FromBody] CreateUserCommand command)
         {
-            int id = _userService.Create(inputModel);
-            //return BadRequest();
-            return CreatedAtAction(nameof(GetById), new {id = id}, inputModel);
+            if (!ModelState.IsValid)
+            {
+                var messages = ModelState
+                    .SelectMany(ms => ms.Value.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+
+                return BadRequest(messages);
+            }
+
+            int id = await _mediator.Send(command);
+
+            return CreatedAtAction(nameof(GetById), new {id}, command);
         }
 
         [HttpPut("{id}/login")]
