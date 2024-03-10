@@ -160,3 +160,5 @@ C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.AP
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
