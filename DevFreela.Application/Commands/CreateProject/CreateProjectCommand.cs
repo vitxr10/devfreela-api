@@ -9,6 +9,10 @@ namespace DevFreela.Application.Commands.CreateProject
 {
     public class CreateProjectCommand : IRequest<int>
     {
+        public CreateProjectCommand()
+        {
+            
+        }
         public CreateProjectCommand(string title, string description, int idClient, int idFreelancer, decimal totalCost)
         {
             Title = title;
@@ -18,10 +22,10 @@ namespace DevFreela.Application.Commands.CreateProject
             TotalCost = totalCost;
         }
 
-        public string Title { get; private set; }
-        public string Description { get; private set; }
-        public int IdClient { get; private set; }
-        public int IdFreelancer { get; private set; }
-        public decimal TotalCost { get; private set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int IdClient { get; set; }
+        public int IdFreelancer { get; set; }
+        public decimal TotalCost { get; set; }
     }
 }

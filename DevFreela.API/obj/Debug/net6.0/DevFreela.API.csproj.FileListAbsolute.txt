@@ -83,10 +83,14 @@ C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.AP
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.API.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.API.pdb
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Atlassian.Jira.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Humanizer.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\MediatR.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\MediatR.Contracts.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -97,6 +101,7 @@ C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.AP
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
@@ -157,8 +162,3 @@ C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.AP
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.pdb
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.genruntimeconfig.cache
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\obj\Debug\net6.0\ref\DevFreela.API.dll
-C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.dll
-C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
-C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
-C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
