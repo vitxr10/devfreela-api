@@ -64,7 +64,7 @@ namespace DevFreela.UnitTests.Core.Entities
         public async Task ProjectExists_Executed_DeleteProject()
         {
             // Arrange
-            var project = new Project("Project test", "Test if finishes", 1, 2, 5000);
+            var project = new Project("Project test", "Test", 1, 2, 5000);
 
             var projectRepositoryMock = Substitute.For<IProjectRepository>();
             projectRepositoryMock.GetByIdAsync(Arg.Any<int>()).Returns(project);
@@ -86,7 +86,7 @@ namespace DevFreela.UnitTests.Core.Entities
         public async Task ProjectExists_Executed_UpdateProject()
         {
             // Arrange
-            var project = new Project("Project test", "Test if finishes", 1, 2, 5000);
+            var project = new Project("Project test", "Test", 1, 2, 5000);
 
             var projectRepositoryMock = Substitute.For<IProjectRepository>();
             projectRepositoryMock.GetByIdAsync(Arg.Any<int>()).Returns(project);

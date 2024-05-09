@@ -10,6 +10,10 @@ namespace DevFreela.Application.Queries.GetProjectById
 {
     public class GetProjectQuery : IRequest<ProjectDetailsViewModel>
     {
+        public GetProjectQuery()
+        {
+        }
+
         public GetProjectQuery(int id)
         {
             Id = id;
