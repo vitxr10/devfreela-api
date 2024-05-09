@@ -45,6 +45,7 @@ namespace DevFreela.Core.Entities
             Title = title;
             Description = description;
             TotalCost = totalCost;
+            UpdatedAt = DateTime.Now;
         }
 
         public void Start()
@@ -62,6 +63,7 @@ namespace DevFreela.Core.Entities
         public void Delete()
         {
             Status = ProjectStatusEnum.Cancelled;
+            UpdatedAt = DateTime.Now;
         }
 
     }

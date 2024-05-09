@@ -14,6 +14,11 @@ namespace DevFreela.Application.Commands.StartProject
             Id = id;
         }
 
+        public StartProjectCommand()
+        {
+
+        }
+
         public int Id { get; set; }
     }
 }

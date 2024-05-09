@@ -9,6 +9,10 @@ namespace DevFreela.Application.Commands.DeleteProject
 {
     public class DeleteProjectCommand : IRequest
     {
+        public DeleteProjectCommand()
+        {
+        }
+
         public DeleteProjectCommand(int id)
         {
             Id = id;

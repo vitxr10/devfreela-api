@@ -14,6 +14,11 @@ namespace DevFreela.Application.Commands.FinishProject
             Id = id;
         }
 
+        public FinishProjectCommand()
+        {
+            
+        }
+
         public int Id { get; set; }
     }
 }
