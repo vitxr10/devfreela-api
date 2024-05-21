@@ -26,7 +26,7 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "client, freelancer")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetAll()
         {
             var query = new GetAllProjectsQuery();
@@ -90,10 +90,10 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPut("{id}/finish")]
-        [Authorize(Roles = "client")]
-        public async Task<IActionResult> Finish(int id)
+        [AllowAnonymous]
+        public async Task<IActionResult> Finish(int id, [FromBody] FinishProjectCommand command)
         {
-            var command = new FinishProjectCommand(id);
+            command.Id = id;
 
             await _mediator.Send(command);
             //return BadRequest();

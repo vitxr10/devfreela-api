@@ -37,7 +37,9 @@ namespace DevFreela.Core.Entities
         public decimal TotalCost { get; private set; }
         public DateTime? StartedAt { get; private set; }
         public DateTime? FinishedAt { get; private set; }
+        public DateTime? UpdatedAt { get; private set; }
         public ProjectStatusEnum Status { get; private set; }
+        public ProjectPaymentStatusEnum PaymentStatus { get; private set; }
         public List<ProjectComment> Comments { get; private set; }
 
         public void Update(string title, string description, decimal totalCost)
@@ -45,7 +47,6 @@ namespace DevFreela.Core.Entities
             Title = title;
             Description = description;
             TotalCost = totalCost;
-            UpdatedAt = DateTime.Now;
         }
 
         public void Start()
@@ -63,6 +64,11 @@ namespace DevFreela.Core.Entities
         public void Delete()
         {
             Status = ProjectStatusEnum.Cancelled;
+        }
+
+        public void SetPaymentPending()
+        {
+            PaymentStatus = ProjectPaymentStatusEnum.Pending;
             UpdatedAt = DateTime.Now;
         }
 

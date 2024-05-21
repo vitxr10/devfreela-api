@@ -46,6 +46,9 @@ namespace DevFreela.Infrastructure.Persistence.Migrations
                     b.Property<int>("IdFreelancer")
                         .HasColumnType("int");
 
+                    b.Property<int>("PaymentStatus")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("StartedAt")
                         .HasColumnType("datetime2");
 
@@ -58,6 +61,9 @@ namespace DevFreela.Infrastructure.Persistence.Migrations
 
                     b.Property<decimal>("TotalCost")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

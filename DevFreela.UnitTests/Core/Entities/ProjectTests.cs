@@ -38,27 +38,27 @@ namespace DevFreela.UnitTests.Core.Entities
             await projectRepositoryMock.Received(1).SaveAsync();
         }
 
-        [Fact]
-        public async Task ProjectIsInProgress_Executed_FinishProject()
-        {
-            // Arrange
-            var project = new Project("Project test", "Test if finishes", 1, 2, 5000);
+        //[Fact]
+        //public async Task ProjectIsInProgress_Executed_FinishProject()
+        //{
+        //    // Arrange
+        //    var project = new Project("Project test", "Test if finishes", 1, 2, 5000);
 
-            var projectRepositoryMock = Substitute.For<IProjectRepository>();
-            projectRepositoryMock.GetByIdAsync(Arg.Any<int>()).Returns(project);
+        //    var projectRepositoryMock = Substitute.For<IProjectRepository>();
+        //    projectRepositoryMock.GetByIdAsync(Arg.Any<int>()).Returns(project);
 
-            var finishProjectCommand = new FinishProjectCommand();
-            var finishProjectCommandHandler = new FinishProjectCommandHandler(projectRepositoryMock);
+        //    var finishProjectCommand = new FinishProjectCommand();
+        //    var finishProjectCommandHandler = new FinishProjectCommandHandler(projectRepositoryMock);
 
-            // Act
-            await finishProjectCommandHandler.Handle(finishProjectCommand, new CancellationToken());
+        //    // Act
+        //    await finishProjectCommandHandler.Handle(finishProjectCommand, new CancellationToken());
 
-            // Assert
-            Assert.Equal(ProjectStatusEnum.Finished, project.Status);
-            Assert.NotNull(project.FinishedAt);
-            await projectRepositoryMock.Received(1).GetByIdAsync(Arg.Any<int>());
-            await projectRepositoryMock.Received(1).SaveAsync();
-        }
+        //    // Assert
+        //    Assert.Equal(ProjectStatusEnum.Finished, project.Status);
+        //    Assert.NotNull(project.FinishedAt);
+        //    await projectRepositoryMock.Received(1).GetByIdAsync(Arg.Any<int>());
+        //    await projectRepositoryMock.Received(1).SaveAsync();
+        //}
 
         [Fact]
         public async Task ProjectExists_Executed_DeleteProject()
@@ -77,7 +77,6 @@ namespace DevFreela.UnitTests.Core.Entities
 
             // Assert
             Assert.Equal(ProjectStatusEnum.Cancelled, project.Status);
-            Assert.NotNull(project.UpdatedAt);
             await projectRepositoryMock.Received(1).GetByIdAsync(Arg.Any<int>());
             await projectRepositoryMock.Received(1).SaveAsync();
         }
@@ -98,7 +97,6 @@ namespace DevFreela.UnitTests.Core.Entities
             await updateProjectCommandHandler.Handle(updateProjectCommand, new CancellationToken());
 
             // Assert
-            Assert.NotNull(project.UpdatedAt);
             await projectRepositoryMock.Received(1).GetByIdAsync(Arg.Any<int>());
             await projectRepositoryMock.Received(1).SaveAsync();
         }

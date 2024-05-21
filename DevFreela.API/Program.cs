@@ -6,6 +6,7 @@ using DevFreela.Application.Validators;
 using DevFreela.Core.Repositories;
 using DevFreela.Core.Services;
 using DevFreela.Infrastructure.Auth;
+using DevFreela.Infrastructure.MessageBus;
 using DevFreela.Infrastructure.Persistence;
 using DevFreela.Infrastructure.Persistence.Repositories;
 using FluentValidation;
@@ -37,6 +38,8 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IMessageBusService, MessageBusService>();
 
 // mediatR
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
@@ -93,7 +96,9 @@ builder.Services
                     IssuerSigningKey = new SymmetricSecurityKey
                 (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
                 };
-            });   
+            });
+
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 

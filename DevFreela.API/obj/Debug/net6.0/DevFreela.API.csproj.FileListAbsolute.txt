@@ -162,3 +162,5 @@ C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.AP
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.pdb
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.genruntimeconfig.cache
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\obj\Debug\net6.0\ref\DevFreela.API.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Threading.Channels.dll
