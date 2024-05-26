@@ -97,7 +97,7 @@ namespace DevFreela.API.Controllers
 
             await _mediator.Send(command);
             //return BadRequest();
-            return NoContent();
+            return Accepted();
         }
 
         [HttpDelete("{id}")]

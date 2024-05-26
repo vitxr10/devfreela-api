@@ -14,10 +14,7 @@ namespace DevFreela.Infrastructure.MessageBus
 
         public MessageBusService(ConnectionFactory factory)
         {
-            _factory = new ConnectionFactory
-            {
-                HostName = "localhost"
-            };
+            _factory = factory;
         }
 
         public void Publish(string queue, byte[] message)
