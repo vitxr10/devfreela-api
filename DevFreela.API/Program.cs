@@ -1,5 +1,6 @@
 using DevFreela.Application.Commands.CreateComment;
 using DevFreela.Application.Commands.CreateProject;
+using DevFreela.Application.Consumers;
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interfaces;
 using DevFreela.Application.Validators;
@@ -55,6 +56,8 @@ builder.Services.AddSingleton<ConnectionFactory>(sp =>
         HostName = "localhost"
     };
 });
+
+builder.Services.AddHostedService<PaymentApprovedConsumer>();
 
 // fluentValidation
 //builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
