@@ -2,18 +2,11 @@
 using DevFreela.Application.Commands.DeleteUser;
 using DevFreela.Application.Commands.LoginUser;
 using DevFreela.Application.Commands.UpdateUser;
-using DevFreela.Application.InputModels;
 using DevFreela.Application.Queries.GetAllUsers;
-using DevFreela.Application.Queries.GetProjectById;
 using DevFreela.Application.Queries.GetUserById;
-using DevFreela.Application.Services.Implementations;
-using DevFreela.Application.Services.Interfaces;
-using DevFreela.Core.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace DevFreela.API.Controllers
 {
