@@ -11,8 +11,8 @@ namespace DevFreela.Application.Services.Interfaces
 {
     public interface IUserService
     {
-        List<UserViewModel> GetAll();
-        UserDetailsViewModel GetById(int id);
+        //List<UserViewModel> GetAll();
+        //UserDetailsViewModel GetById(int id);
         int Create(CreateUserInputModel inputModel);
         void UpdateLogin(int id);
         void Update(int id, UpdateUserInputModel inputModel);

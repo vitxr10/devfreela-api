@@ -19,20 +19,20 @@ namespace DevFreela.Application.Services.Implementations
             _dbContext = dbContext;
         }
 
-        public List<UserViewModel> GetAll()
-        {
-            var users = _dbContext.Users.Select(u => new UserViewModel(u.FullName)).ToList();
+        //public List<UserViewModel> GetAll()
+        //{
+        //    var users = _dbContext.Users.Select(u => new UserViewModel(u.FullName)).ToList();
 
-            return users;
-        }
+        //    return users;
+        //}
 
-        public UserDetailsViewModel GetById(int id)
-        {
-            var user = _dbContext.Users.SingleOrDefault(u => u.Id == id);
-            var userDetailsViewModel = new UserDetailsViewModel(user.FullName);
+        //public UserDetailsViewModel GetById(int id)
+        //{
+        //    var user = _dbContext.Users.SingleOrDefault(u => u.Id == id);
+        //    var userDetailsViewModel = new UserDetailsViewModel(user.FullName);
 
-            return userDetailsViewModel;
-        }
+        //    return userDetailsViewModel;
+        //}
 
         public int Create(CreateUserInputModel inputModel)
         {

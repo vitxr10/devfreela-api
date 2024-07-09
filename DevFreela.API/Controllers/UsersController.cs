@@ -1,6 +1,11 @@
 ﻿using DevFreela.Application.Commands.CreateUser;
+using DevFreela.Application.Commands.DeleteUser;
 using DevFreela.Application.Commands.LoginUser;
+using DevFreela.Application.Commands.UpdateUser;
 using DevFreela.Application.InputModels;
+using DevFreela.Application.Queries.GetAllUsers;
+using DevFreela.Application.Queries.GetProjectById;
+using DevFreela.Application.Queries.GetUserById;
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interfaces;
 using DevFreela.Core.Entities;
@@ -8,6 +13,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace DevFreela.API.Controllers
 {
@@ -16,27 +22,36 @@ namespace DevFreela.API.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly IUserService _userService;
-        public UsersController(IMediator mediator, IUserService userService) 
+        public UsersController(IMediator mediator) 
         {
             _mediator = mediator;
-            _userService = userService;
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var projects = _userService.GetAll();
+            var query = new GetAllUsersQuery();
 
-            return Ok(projects);
+            var users = await _mediator.Send(query);
+
+            return Ok(users);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            _userService.GetById(id);
-            //return NotFound();
-            return Ok();
+            try
+            {
+                var query = new GetUserByIdQuery(id);
+
+                var user = await _mediator.Send(query);
+
+                return Ok(user);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpPost]
@@ -75,17 +90,37 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] UpdateUserInputModel inputModel)
+        public async Task<IActionResult> Put(int id, [FromBody] UpdateUserCommand command)
         {
-            ////return BadRequest();
-            return NoContent();
+            try
+            {
+                command.Id = id;
+
+                await _mediator.Send(command);
+
+                return NoContent();
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            //return BadRequest();
-            return NoContent();
+            try
+            {
+                var query = new DeleteUserCommand(id);
+
+                await _mediator.Send(query);
+
+                return NoContent();
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }
