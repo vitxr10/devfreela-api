@@ -21,6 +21,11 @@ namespace DevFreela.Application.Commands.CreateComment
 
         public async Task<Unit> Handle(CreateCommentCommand request, CancellationToken cancellationToken)
         {
+            var project = await _projectRepository.GetByIdAsync(request.IdProject);
+
+            if (project == null)
+                throw new DirectoryNotFoundException("Projeto não encontrado.");
+
             var comment = new ProjectComment(request.Content, request.IdProject, request.IdUser);
 
             await _projectRepository.InsertCommentAsync(comment);

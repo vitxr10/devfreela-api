@@ -22,6 +22,12 @@ namespace DevFreela.Application.Commands.StartProject
         {
             var project = await _projectRepository.GetByIdAsync(request.Id);
 
+            if (project == null)
+                throw new DirectoryNotFoundException("Projeto não encontrado.");
+
+            if (project.Status == Core.Enums.ProjectStatusEnum.Created)
+                throw new Exception("Não é possível iniciar o projeto");
+
             project.Start();
             await _projectRepository.SaveAsync();
 

@@ -32,5 +32,15 @@ namespace DevFreela.Core.Entities
         public List<ProjectComment> Comments { get; private set; }
         public List<Project> OwnedProjects { get; private set; }
         public List<Project> FreelanceProjects { get; private set; }
+
+        public void Update(string email)
+        {
+            Email = email;
+        }
+
+        public void Delete()
+        {
+            Active = false;
+        }
     }
 }

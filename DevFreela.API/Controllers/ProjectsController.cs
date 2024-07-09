@@ -4,13 +4,10 @@ using DevFreela.Application.Commands.DeleteProject;
 using DevFreela.Application.Commands.FinishProject;
 using DevFreela.Application.Commands.StartProject;
 using DevFreela.Application.Commands.UpdateProject;
-using DevFreela.Application.InputModels;
 using DevFreela.Application.Queries.GetAllProjects;
 using DevFreela.Application.Queries.GetProjectById;
-using DevFreela.Application.Services.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DevFreela.API.Controllers
@@ -40,75 +37,133 @@ namespace DevFreela.API.Controllers
         [Authorize(Roles = "client, freelancer")]
         public async Task<IActionResult> GetById(int id)
         {
-            var query = new GetProjectQuery(id);
+            try
+            {
+                var query = new GetProjectQuery(id);
 
-            var project = await _mediator.Send(query);
+                var project = await _mediator.Send(query);
 
-            return Ok(project);
+                return Ok(project);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+
         }
 
         [HttpPost]
         [Authorize(Roles = "client")]
         public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
-            int id = await _mediator.Send(command);
-            //return BadRequest();
-            return CreatedAtAction(nameof(GetById), new { id }, command);
+            try
+            {
+                int id = await _mediator.Send(command);
+
+                return CreatedAtAction(nameof(GetById), new { id }, command);
+            }
+            catch(DirectoryNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpPost("{id}/comments")]
         [Authorize(Roles = "client, freelancer")]
         public async Task<IActionResult> PostComment(int id, [FromBody] CreateCommentCommand command)
         {
-            command.IdProject = id;
+            try
+            {
+                command.IdProject = id;
 
-            await _mediator.Send(command);
-            //return BadRequest();
-            return NoContent();
+                await _mediator.Send(command);
+
+                return NoContent();
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpPut("{id}")]
         [Authorize(Roles = "client")]
         public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectCommand command)
         {
-            command.Id = id;
+            try
+            {
+                command.Id = id;
 
-            await _mediator.Send(command);
-            //return BadRequest();
-            return NoContent();
+                await _mediator.Send(command);
+
+                return NoContent();
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpPut("{id}/start")]
         [Authorize(Roles = "client")]
         public async Task<IActionResult> Start(int id)
         {
-            var command = new StartProjectCommand(id);
+            try
+            {
+                var command = new StartProjectCommand(id);
 
-            await _mediator.Send(command);
-            //return BadRequest();
-            return NoContent();
+                await _mediator.Send(command);
+
+                return NoContent();
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut("{id}/finish")]
-        [AllowAnonymous]
+        [Authorize(Roles = "client")]
         public async Task<IActionResult> Finish(int id, [FromBody] FinishProjectCommand command)
         {
-            command.Id = id;
+            try
+            {
+                command.Id = id;
 
-            await _mediator.Send(command);
-            //return BadRequest();
-            return Accepted();
+                await _mediator.Send(command);
+
+                return Accepted();
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "client")]
         public async Task<IActionResult> Delete(int id)
         {
-            var command = new DeleteProjectCommand(id);
+            try
+            {
+                var command = new DeleteProjectCommand(id);
 
-            await _mediator.Send(command);
-            //return BadRequest();
-            return NoContent();
+                await _mediator.Send(command);
+
+                return NoContent();
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }

@@ -29,6 +29,7 @@ namespace DevFreela.Application.Commands.LoginUser
             var passwordHash = _authService.ComputeSha256Hash(request.Password);
 
             var user = await _userRepository.GetByLoginAndPasswordAsync(request.Email, passwordHash);
+
             if (user == null)
                 throw new Exception("Login e/ou senha inválidos.");
 

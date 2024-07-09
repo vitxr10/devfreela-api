@@ -22,6 +22,9 @@ namespace DevFreela.Application.Commands.DeleteProject
         {
             var project = await _projectRepository.GetByIdAsync(request.Id);
 
+            if (project == null)
+                throw new DirectoryNotFoundException("Projeto não encontrado.");
+
             project.Delete();
 
             await _projectRepository.SaveAsync();

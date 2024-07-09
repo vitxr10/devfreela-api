@@ -26,6 +26,12 @@ namespace DevFreela.Application.Commands.FinishProject
         {
             var project = await _projectRepository.GetByIdAsync(request.Id);
 
+            if (project == null)
+                throw new DirectoryNotFoundException("Projeto não encontrado.");
+
+            if (project.Status == Core.Enums.ProjectStatusEnum.InProgress)
+                throw new Exception("Não é possível finalizar o projeto");
+
             var paymentInfo = new PaymentInfoDTO(request.Id, request.CreditCardNumber, request.Cvv, request.ExpiresAt, request.FullName, request.Amount);
 
             _paymentsService.ProcessPayment(paymentInfo);

@@ -9,8 +9,10 @@ namespace DevFreela.Core.Repositories
 {
     public interface IUserRepository
     {
-        Task<int> InsertAsync(User user);
+        Task<List<User>> GetAllAsync();
         Task<User> GetByLoginAndPasswordAsync(string login, string password);
-
+        Task<User> GetByIdAsync(int id);
+        Task<int> InsertAsync(User user);
+        Task SaveAsync();
     }
 }

@@ -24,6 +24,9 @@ namespace DevFreela.Application.Queries.GetProjectById
         {
             var project = await _projectRepository.GetByIdAsync(request.Id);
 
+            if (project == null)
+                throw new DirectoryNotFoundException("Projeto não encontrado.");
+
             var projectDetailsViewModel = new ProjectDetailsViewModel
                 (
                     project.Title,

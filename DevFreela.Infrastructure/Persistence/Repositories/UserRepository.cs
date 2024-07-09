@@ -19,6 +19,16 @@ namespace DevFreela.Infrastructure.Persistence.Repositories
             _dbContext = dbContext;
         }
 
+        public async Task<List<User>> GetAllAsync()
+        {
+            return await _dbContext.Users.ToListAsync();
+        }
+
+        public async Task<User> GetByIdAsync(int id)
+        {
+            return await _dbContext.Users.SingleOrDefaultAsync(u => u.Id == id);
+        }
+
         public async Task<User> GetByLoginAndPasswordAsync(string login, string password)
         {
             return await _dbContext.Users.SingleOrDefaultAsync(u => u.Email == login && u.Password == password);
@@ -30,6 +40,11 @@ namespace DevFreela.Infrastructure.Persistence.Repositories
             await _dbContext.SaveChangesAsync();
 
             return user.Id;
+        }
+
+        public async Task SaveAsync()
+        {
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

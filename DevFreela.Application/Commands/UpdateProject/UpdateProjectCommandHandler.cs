@@ -22,6 +22,9 @@ namespace DevFreela.Application.Commands.UpdateProject
         {
             var project = await _projectRepository.GetByIdAsync(request.Id);
 
+            if (project == null)
+                throw new DirectoryNotFoundException("Projeto não encontrado.");
+
             project.Update(request.Title, request.Description, request.TotalCost);
             await _projectRepository.SaveAsync();
 
