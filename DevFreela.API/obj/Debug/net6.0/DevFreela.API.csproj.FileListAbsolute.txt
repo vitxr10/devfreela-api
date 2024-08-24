@@ -110,6 +110,7 @@ C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.AP
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\RabbitMQ.Client.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\RestSharp.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -121,6 +122,7 @@ C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.AP
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Runtime.Caching.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Threading.Channels.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Windows.Extensions.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -162,5 +164,3 @@ C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.AP
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.pdb
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\obj\Debug\net6.0\DevFreela.API.genruntimeconfig.cache
 C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\obj\Debug\net6.0\ref\DevFreela.API.dll
-C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\RabbitMQ.Client.dll
-C:\Users\vitor\OneDrive\Documentos\Projetos Mentoria .NET\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Threading.Channels.dll

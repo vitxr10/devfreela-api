@@ -39,8 +39,6 @@ namespace DevFreela.Infrastructure.MessageBus
                         basicProperties: null,
                         body: message
                     );
-
-
                 }
             }
         }

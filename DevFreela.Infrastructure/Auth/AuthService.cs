@@ -24,10 +24,8 @@ namespace DevFreela.Infrastructure.Auth
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {
-                // Compute hash - retorna byte array
                 byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
 
-                // Converte byte array p/ string 
                 StringBuilder builder = new StringBuilder();
                 for(int i = 0; i< bytes.Length; i++)
                 {
