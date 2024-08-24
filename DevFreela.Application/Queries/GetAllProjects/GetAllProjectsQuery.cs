@@ -12,6 +12,6 @@ namespace DevFreela.Application.Queries.GetAllProjects
     public class GetAllProjectsQuery : IRequest<PaginationResult<ProjectViewModel>>
     {
         public string? StringQuery { get; set; }
-        public int Page { get; set; }
+        public int Page { get; set; } = 1;
     }
 }

@@ -10,7 +10,7 @@ namespace DevFreela.Core.Repositories
 {
     public interface IProjectRepository
     {
-        Task<PaginationResult<Project>> GetAllAsync(string? stringQuery, int page = 1);
+        Task<PaginationResult<Project>> GetAllAsync(string? stringQuery, int page);
         Task<Project> GetByIdAsync(int id);
         Task InsertAsync(Project project);
         Task InsertCommentAsync(ProjectComment comment);
