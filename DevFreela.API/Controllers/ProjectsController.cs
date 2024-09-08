@@ -51,7 +51,6 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "client")]
         public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
             try

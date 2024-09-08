@@ -13,12 +13,12 @@ namespace DevFreela.Application.Commands.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int>
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IAuthService _authService;
 
-        public CreateUserCommandHandler(IUserRepository userRepository, IAuthService authService)
+        public CreateUserCommandHandler(IUnitOfWork unitOfWork, IAuthService authService)
         {
-            _userRepository = userRepository;
+            _unitOfWork = unitOfWork;
             _authService = authService;
         }
 
@@ -28,7 +28,10 @@ namespace DevFreela.Application.Commands.CreateUser
 
             var user = new User(request.FullName, request.Email, passwordHash, request.BirthDate, request.Role);
 
-            return await _userRepository.InsertAsync(user);
+            await _unitOfWork.Users.InsertAsync(user);
+            await _unitOfWork.CompleteAsync();
+
+            return user.Id;
         }
     }
 }

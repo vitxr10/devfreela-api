@@ -40,6 +40,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IMessageBusService, MessageBusService>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // mediatR
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
